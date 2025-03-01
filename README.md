@@ -9,7 +9,7 @@ DreamWeaver AI is an AI-powered image generator that allows users to input a tex
 - **Deployment:** Vercel  
 
 ## **Live Demo**
-**Temporary Deployment Link:** [COMING SOON] (Replace with actual Vercel link)
+**Temporary Deployment Link:** https://dreamweaver-ai-mvp.vercel.app/
 
 ## **MVP Features**
 **AI Image Generation** – Users can enter a prompt and generate an AI-created image.  
