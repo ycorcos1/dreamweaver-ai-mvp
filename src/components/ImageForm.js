@@ -18,23 +18,18 @@ function ImageForm() {
     setPrevPrompt(prompt);
 
     try {
-      const response = await fetch(
-        "https://artdream-ai-text-to-image-generator.p.rapidapi.com/generateRapid",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-            "X-rapidapi-Key":
-              "420951d95fmsh50108a369eedf75p1bec2bjsn903850a21c31",
-            "X-rapidapi-Host":
-              "artdream-ai-text-to-image-generator.p.rapidapi.com",
-          },
-          body: new URLSearchParams({
-            num_images: "1",
-            text: prompt,
-          }),
-        }
-      );
+      const response = await fetch(process.env.REACT_APP_API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          "X-rapidapi-Key": process.env.REACT_APP_RAPIDAPI_KEY,
+          "X-rapidapi-Host": process.env.REACT_APP_RAPIDAPI_HOST,
+        },
+        body: new URLSearchParams({
+          num_images: "1",
+          text: prompt,
+        }),
+      });
       const blob = await response.blob();
       const imageUrl = URL.createObjectURL(blob);
       if (!blob) {
