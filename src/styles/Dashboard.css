@@ -1,0 +1,38 @@
+/* Main Dashboard Layout */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Content Area */
+.content-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Image Container - Adapts to screen size */
+.image-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  height: calc(100vh - 150px);
+}
+
+@media screen and (max-width: 900px) {
+  .image-container {
+    height: calc(100vh - 120px);
+  }
+}
